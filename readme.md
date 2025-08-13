@@ -115,7 +115,7 @@ nano recursos/models/conexao.php
 2. Configurações adicionais, sugeridas:
 
 - Alterar o arquivo ./recursos/assets/favicon.png pelo ícone desejado (Recomendo que seja no mesmo tamanho); e
-- Alterar o arquivo ./recursos/assets/wallpaper.png por uma imagem de sua OM para que possa compor o plano de fundo da tela de login.
+- Alterar o arquivo ./recursos/assets/wallpaper.jpg por uma imagem de sua OM para que possa compor o plano de fundo da tela de login.
 - Alterar os serviços e links no arquivo helpdesk/index_userSupAdm.php
 
 ## Acesso inicial
