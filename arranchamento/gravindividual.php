@@ -2,7 +2,6 @@
 
 require "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
-date_default_timezone_set("America/Cuiaba");
 $pdo = conectar("membros");
 $pdo2 = conectar("arranchamento");
 $cafe = filter_input(INPUT_POST, "cafe");
@@ -51,7 +50,6 @@ if ($erro < 1) {
     $nomeguerra = $user['nomeguerra'];
     $idpgrad = $user['idpgrad'];
     $idsu = $user['idsubunidade'];
-    date_default_timezone_set("America/Cuiaba");
     $hoje = date("d/m/Y");
     $agora = date("H:i:s");
     $quemgrava = getPGrad($_SESSION['auth_data']['idpgrad']) . " " . $_SESSION['auth_data']['nomeguerra'];

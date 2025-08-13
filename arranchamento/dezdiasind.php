@@ -1,6 +1,4 @@
 <?php
-date_default_timezone_set("America/Cuiaba");
-
 require "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
 

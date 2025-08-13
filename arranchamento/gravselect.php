@@ -2,7 +2,6 @@
 
 require "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
-date_default_timezone_set("America/Cuiaba");
 $pdo_2 = conectar("arranchamento");
 $datarancho = filter_input(INPUT_GET, "datarancho");
 $qtduser = filter_input(INPUT_GET, "qtduser");

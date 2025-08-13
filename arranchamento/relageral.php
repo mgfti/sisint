@@ -1,6 +1,5 @@
 <?php
 include "../recursos/models/conexao.php";
-date_default_timezone_set("America/Cuiaba");
 $pdo = conectar("membros");
 if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
     $ip = $_SERVER['HTTP_CLIENT_IP'];

@@ -7,7 +7,6 @@ $ocafe = filter_input(INPUT_POST, "ocafe");
 $oalmoco = filter_input(INPUT_POST, "oalmoco");
 $ojantar = filter_input(INPUT_POST, "ojantar");
 $datarancho = filter_input(INPUT_GET, "dtr");
-date_default_timezone_set("America/Cuiaba");
 $hoje = date("d/m/Y");
 $agora = date("H:i:s");
 $quemgrava = getPGrad($_SESSION['auth_data']['idpgrad']) . " " . $_SESSION['auth_data']['nomeguerra'];

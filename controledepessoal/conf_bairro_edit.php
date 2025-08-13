@@ -5,9 +5,9 @@ require "../recursos/models/conexao.php";
 if (!isset($_POST['btn_conf_bairro_edit'])) {
   header('Location: index.php');
   exit();
-} else if (!$_SESSION['user_numconta'] >= "2") {
-  header('Location: index.php');
-  exit();
+} else if (!$_SESSION['nivel_plano_chamada'] == "Administrador") { 
+    header('Location: index.php');
+    exit();
 }
 
 $idBairro = base64_decode(filter_input(INPUT_GET, "token", FILTER_SANITIZE_STRING));

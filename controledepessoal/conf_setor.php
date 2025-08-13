@@ -3,12 +3,13 @@ require "../recursos/models/versession.php";
 require "../recursos/models/conexao.php";
 
 if (!isset($_POST['action'])) {
-  header('Location: index.php');
-  exit();
-} else if (!$_SESSION['user_numconta'] >= "2") {
-  header('Location: index.php');
-  exit();
+    header('Location: index.php');
+    exit();
+} else if (!$_SESSION['nivel_plano_chamada'] == "Administrador") { 
+    header('Location: index.php');
+    exit();
 }
+
 $setor = filter_input(INPUT_POST, "setor", FILTER_SANITIZE_STRING);
 try {
   $executa = criar_setor_de_bairro($setor);

@@ -1,12 +1,11 @@
 <?php
 require "../recursos/models/versession.php";
 require "../recursos/models/conexao.php";
-date_default_timezone_set("America/Cuiaba");
 
 if (!isset($_POST['action'])) {
     header('Location: index.php');
     exit();
-} else if (!$_SESSION['user_numconta'] == "3") {
+} else if (!$_SESSION['nivel_plano_chamada'] == "Administrador") { 
     header('Location: index.php');
     exit();
 }

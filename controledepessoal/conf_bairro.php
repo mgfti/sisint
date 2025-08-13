@@ -2,6 +2,11 @@
 require "../recursos/models/versession.php";
 require "../recursos/models/conexao.php";
 
+if (!$_SESSION['nivel_plano_chamada'] == "Administrador") { 
+    header('Location: index.php');
+    exit();
+}
+
 $pdo = conectar("membros");
 
 $bairro = filter_input(INPUT_POST, "bairro");

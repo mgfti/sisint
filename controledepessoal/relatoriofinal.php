@@ -1,7 +1,6 @@
 <?php
 require "../recursos/models/versession.php";
 require "../recursos/models/conexao.php";
-date_default_timezone_set("America/Cuiaba");
 if ($_SESSION['nivel_plano_chamada'] == "Sem Acesso") {
     $msgerro = base64_encode('Usuário não possui acesso!');
     header('Location: ../sistemas/index.php?token=' . $msgerro);

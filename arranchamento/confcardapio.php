@@ -7,7 +7,6 @@ $cardcafe = filter_input(INPUT_POST, "cardcafe");
 $cardalmoco = filter_input(INPUT_POST, "cardalmoco");
 $cardjantar = filter_input(INPUT_POST, "cardjantar");
 $datacardapio = filter_input(INPUT_GET, "dtc");
-date_default_timezone_set("America/Cuiaba");
 $hoje = date("d/m/Y");
 $agora = date("H:i:s");
 $quemgrava = getPGrad($_SESSION['auth_data']['idpgrad']) . " " . $_SESSION['auth_data']['nomeguerra'];

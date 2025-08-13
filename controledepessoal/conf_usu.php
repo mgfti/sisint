@@ -1,5 +1,4 @@
 <?php
-date_default_timezone_set("America/Cuiaba");
 require "../recursos/models/versession.php";
 require "../recursos/models/conexao.php";
 
@@ -43,7 +42,7 @@ $cpfcripto = base64_encode(str_replace(array("-", "."), "", $cpf)); // elimina -
 
 $tabela = "usuarios";
 try {
-  $gravddos = $pdo->prepare("INSERT INTO $tabela (identidade, cpf, senha, idsubunidade, "
+  $gravddos = $pdo->prepare("INSERT INTO $tabela (identidade, cpf, hashsenha, idsubunidade, "
     . "idpgrad, nomeguerra, acessorancho, contarancho, acessoguarda, contaguarda, "
     . "acessopchamada, contapchamada, acessoservico, contaservico, userativo, nomecompleto, endereco, bairro, cidade, "
     . "estado, celular, fixo, email, datanascimento, acessohd, contahd, datanascimento2) "
@@ -90,6 +89,7 @@ try {
   }
 } catch (PDOException $e) {
   echo $e->getMessage();
+  die("Erro ao inserir dados!");
 }
 $msgsuccess = base64_encode('Usuário criado com sucesso!');
 header("Location: cad_usu_supervisor.php?token2=" . $msgsuccess);

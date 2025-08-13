@@ -5,7 +5,6 @@ include "../recursos/models/conexao.php";
 $pdo1 = conectar("membros");
 $pdo2 = conectar("arranchamento");
 
-date_default_timezone_set("America/Cuiaba");
 $somadias = filter_input(INPUT_GET, "soma");
 //$somadias = 0;
 
