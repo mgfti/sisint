@@ -38,6 +38,11 @@ define('UF', 'MS'); // Abreviatura do estado
 define('PASTA_RAIZ', '/var/www/html/sisint/'); // caminho da raiz do codigo php
 define('PASTA_BKP', '/var/www/bkp/'); // caminho da pasta de backup do codigo php. Exige que a pasta seja do usuario www-data. Corrije com o comando: "chown www-data /var/www/bkp"
 
+
+$ipGuarda = '10.10.10.10'; // computador do anotador da guarda = Soldados podem acessar sistema da guarda somente no computador deste IP
+$ipTotem = '10.10.10.10'; // computador do alojamento = Soldados podem acessar sistema de controles do alojamento somente no computador do alojamento
+
+
 /**
  * @param Atenção! Não modificar nada daqui para baixo
  */

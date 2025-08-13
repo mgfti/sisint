@@ -51,9 +51,6 @@ if (count($users) < 1) { // se não encontrar usuarios, significa que falhou no 
     exit();
 } else { // caso contrário, login realizado
     $_SESSION['auth_data'] = $users[0];
-
-
-
     // checa a força da senha para dar feedback ao usuario
     $_SESSION['auth_data']['str'] = 'FORTE';
     $pass = base64_decode($senha);
@@ -98,9 +95,8 @@ if (count($users) < 1) { // se não encontrar usuarios, significa que falhou no 
     //guarda
 
     // alguns computadores devem ser configurados com ip fixo, assim permite acesso ao utilizador mesmo que ele não possua privilégios
-    $ipGuarda = '10.57.101.177'; // computador do anotador da guarda
-    // $ipNotebook = '10.57.101.178'; // retirado da RP
-    $ipTotem = '10.57.101.73'; // computador do alojamento
+    // para verificar quais IP são permitidos, consulte recursos/conexao.php
+
 
     if ($users[0]['acessoguarda'] == "S") {
       if ($users[0]['contaguarda'] == "1" and ($ip == $ipGuarda /*or $ip == $ipNotebook*/)) { // IP da Gda e do Notebook da RP
