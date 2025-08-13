@@ -125,6 +125,7 @@ if ($subunidade > 0) { // FOI ESCOLHIDO UMA SUBUNIDADE
         <?php
         for ($i = 0; $i < $qtd_users; $i++) {
           $reg = $qtdusers[$i];
+          print_r($reg['idpgrad']);
           $su4 = listar_subunidades($reg['idsubunidade'])[0];
           $consultaSetor = $pdo->prepare("SELECT bairros.bairro, setores.setor FROM bairros LEFT JOIN setores ON (bairros.setor = setores.id) WHERE bairros.id = :idBairros");
           $consultaSetor->bindParam(":idBairros", $reg['bairro'], PDO::PARAM_STR);
@@ -135,7 +136,7 @@ if ($subunidade > 0) { // FOI ESCOLHIDO UMA SUBUNIDADE
           echo ("<tr>");
           echo ("<td width='45%'>");
           echo ("<font face = 'font-family:calibri;' size=2>");
-          echo ("<b>" . getPGrad($reg[['idpgrad']]) . " " . $reg['nomeguerra'] . "</b>" . " (" . $reg['nomecompleto'] . ")");
+          echo ("<b>" . getPGrad($reg['idpgrad']) . " " . $reg['nomeguerra'] . "</b>" . " (" . $reg['nomecompleto'] . ")");
           echo ("<br>");
           echo ("<b>FRAÇÃO: </b>" . $su4['descricao'] . " -<b> DATA NASCIMENTO: </b>" . $reg['datanascimento']);
           echo ("</font>");

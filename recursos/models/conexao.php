@@ -24,7 +24,7 @@ if($isTest) {
 }
 
 /* Configurações da organização militar que executa o sistema */
-define('SISBOL_URL', 'http://10.10.10.10/band/'); // colocar o endedeço com o caminho para a pasta band
+define('SISBOL_URL', 'http://10.10.10.10/band/'); // colocar o endereço com o caminho para a pasta band
 define('NOME_OM', '3ª Bateria de Artilharia Antiaérea'); // colocar o nome por extenso somente com as iniciais em maiúsculo
 define('NOME_HISTORICO_OM', 'Bateria Presidente Ernesto Geisel'); // colocar o nome por extenso somente com as iniciais em maiúsculo
 define('ORIGEM', '3ª Bia A AAé 1978'); // esse é o texto entre parênteses
