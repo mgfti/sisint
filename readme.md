@@ -132,7 +132,8 @@ sudo systemctl start mysql
     - IMPORTANTE: teste também se o arquivo http://endereco/sisint/recursos/models/conexao.php ou http://endereco/sisint/recursos/models/conexao.php~ não exibe a senha do banco de dados publicamente, caso esteja, altere as configurações do Apache.
 
 3. Acesse o endereço http://endereco/phpmyadmin (realize o login se for necessário)
-    - Importe o arquivo database.sql
+    - Importe o arquivo database.sql, mantendo as opções recomendadas
+    - Por motivos de segurança, recomenda-se que remova este arquivo após a criação do banco de dados
 
 3. Realize o login com a conta pré-cadastrada:
     CPF: 12312312300
