@@ -6,7 +6,7 @@ Foi criado inicialmente para atender a 3ª Bateria de Artilharia Antiaérea, mas
 Por ser um sistema Web, o usuário final pode acessar usando um computador conectado na Rede Corporativa. Não possui custo operacional, pois o sistema pode funcionar no mesmo servidor da página da Intranet da OM.
 
 
-## Visão Geral
+### Visão Geral
 
 Esse projeto contempla os seguintes serviços:
 
@@ -62,7 +62,7 @@ Esse projeto contempla os seguintes serviços:
     - permite a criação de backup
     - níveis de acesso
 
-## Pré-requisitos
+### Pré-requisitos
 
 São requisitos para o sistema funcionar corretamente:
 
@@ -75,7 +75,7 @@ São requisitos para o sistema funcionar corretamente:
 
 Obs: Para ambiente de testes e desenvolvimento, usei Windows 10 + XAMPP + VS Code + Google Chrome
 
-## Instalação
+### Instalação
 
 1. Com os requisitos de Software acima, navegue até o diretório:
 
@@ -98,17 +98,17 @@ cd sisint
 4. Altere as informações do Sistema:
 
 ```bash
-nano ./recursos/models/conexao.php   # pode ser feito através do VS Code ou outro editor
+nano ./recursos/models/conexao.php   # pode ser feito através do VS Code ou outro editor (comandos "code" ou "notepad")
 ```
 
 4. 
 
-## Configuração
+### Configuração
 
 1. Abra o arquivo de configuração:
 
 ```bash
-nano recursos/models/conexao.php
+nano recursos/models/conexao.php    # pode ser feito através do VS Code ou outro editor (comandos "code" ou "notepad")
 ```
 - A variável test deve estar em true somente em servidor de desenvolvimento e testes.
 
@@ -118,28 +118,27 @@ nano recursos/models/conexao.php
 - Alterar o arquivo ./recursos/assets/wallpaper.jpg por uma imagem de sua OM para que possa compor o plano de fundo da tela de login.
 - Alterar os serviços e links no arquivo helpdesk/index_userSupAdm.php
 
-## Acesso inicial
+### Acesso inicial
 
 1. Inicie a aplicação e permita que seja executada ao inicializar o sistema operacional:
 
 ```bash
 sudo systemctl start apache2
 sudo systemctl start mysql
-sudo systemctl start apache2
 
 ```
 
-2. Abra o navegador e acesse usando o link http://endereco/sisint , aqui deve aparecer ua tela de login.
+2. Abra o navegador e acesse usando o link http://endereco/sisint , aqui deve aparecer uma tela de login.
     - IMPORTANTE: teste também se o arquivo http://endereco/sisint/recursos/models/conexao.php ou http://endereco/sisint/recursos/models/conexao.php~ não exibe a senha do banco de dados publicamente, caso esteja, altere as configurações do Apache.
 
 3. Acesse o endereço http://endereco/phpmyadmin (realize o login se for necessário)
     - Importe o arquivo database.sql
 
-3. Realize o login com a conta pré-cadstrada:
+3. Realize o login com a conta pré-cadastrada:
     CPF: 12312312300
     Senha: 12312312300
 
-## Capturas de Tela
+### Capturas de Tela
 
 ![Captura de Tela 1](capturas/Captura1.png)
 Você será solicitado a trocar de senha e mais tarde para atualizar seus dados do Plano de Chamada, siga as instruções para cadastrar uma senha forte.
@@ -158,14 +157,14 @@ O menu lateral tem suas funções variadas conforme onde estamos navegando. Nele
 ![Captura de Tela 5](capturas/Captura5.png)
 Observe que o menu lateral possui outros link. Aqui poderemos clicar em adicionar usuários.
 
-Chegou a hora de cadastrar o efetivo de nossa OM, esse trabalho é manual e precisa ser feito com calma, atentanto principalmente ao cadastro do CPF, por este ser o dado de login e senha inicial e do nível de acesso do usuário. A atualização dos dados pode ser feito posteriormente, pemitindo desativar usuários.
+Chegou a hora de cadastrar o efetivo de nossa OM, esse trabalho é manual e precisa ser feito com calma, atentando principalmente ao cadastro do CPF, por este ser o dado de login e senha inicial e do nível de acesso do usuário. A atualização dos dados pode ser feito posteriormente, pemitindo desativar usuários.
 
 O próximo passo é realizar o cadastro das viaturas em http://endereco/sisint/logistica/gestao_viaturas.php
 Obs: O Módulo logística não esta 100% implementado, por isso não há link que direcione o usuário a essa pasta.
 
 
 
-## Contribuição
+### Contribuição
 
 Em breve criarei um TODO_LIST e disponibilizarei para direcionar esforços a quem queira contribuir.
 Se quiser contribuir, siga os passos abaixo:
@@ -176,7 +175,7 @@ Se quiser contribuir, siga os passos abaixo:
 4. Faça push para a branch: `git push origin feature-nova`.
 5. Abra um pull request.
 
-## Licença
+### Licença
 
 Este projeto é licenciado sob a [Licença Pública Geral GNU (GPL) versão 3](LICENSE).
 #
