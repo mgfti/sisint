@@ -14,7 +14,6 @@ $jantardia = $m_cardapio['jantar'];
 <!-- Modal -->
 <div class="modal-content">
     <div class="modal-header state modal-primary">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="modal-large-label">Cardápio do dia <?php echo($cardia);?></h4>
     </div>
     <div class="modal-body">

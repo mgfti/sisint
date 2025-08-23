@@ -4,6 +4,8 @@ require "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
 $pdo = conectar("membros");
 $pdo2 = conectar("arranchamento");
+$datahoje = date("d/m/Y");
+$horagora = date("H:i:s");
 //limpa os arranchamentos vazios
 $sqldeleta = "DELETE FROM arranchado WHERE cafe =  '' AND almoco = '' AND jantar = ''";
 $sqlapaga = $pdo2->prepare($sqldeleta);
@@ -259,8 +261,7 @@ if ($totalregistro >= 3) {
         echo "<th align='center' valign='middle' width=20%><font size=0.5> " . $qtdcbsd . " </font></th>";
         echo("</tr>");
         echo("</table>");
-        $datahoje = date("d/m/Y");
-        $horagora = date("H:i:s");
+        
     } else { echo "</br><B>NÃO EXISTE LANÇAMENTOS PARA ESTA DATA.</B>\n"; }
     try { ?>
         <table border='1' cellpadding='2' cellspacing='0' style='width: 100%'>

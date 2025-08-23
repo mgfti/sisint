@@ -80,7 +80,7 @@ if ($erro < 1) { ?>
                     <div class="panel"><?php render_cabecalho_painel('ARRANCHAR POR SELEÇÃO: '. $qtd_users.' MILITARES EM '.$datarancho, 'fas fa-utensils', true); ?>
                     <div class="panel-content">
                       <div class="table-responsive">
-                        <form action="gravselect.php<?php echo ("?qtduser=$qtd_users&datarancho=$datarancho") ?>" method="post">
+                        <form action="gravselect.php?qtduser=<?=$qtd_users?>&datarancho=<?=$datarancho?>" method="post">
                           <table class="table table-striped table-hover table-bordered text-center">
                             <thead>
                               <tr>
@@ -96,20 +96,12 @@ if ($erro < 1) { ?>
                             </thead>
                             <tbody>
                               <?php for ($i = 0; $i < $qtd_users; $i++) { 
-                                $reg = $qtdusers[$i];
-                                $regpg = getPGrad($regidpgrad);
-                                echo ("<tr>");
-                                $userid = "userid" . $i;
-                                $nmgrr = "nomeguerra" . $i;
-                                $useridpg = "useridpg" . $i;
-                                $useridsu = "useridsu" . $i;
-                                $_SESSION[$userid] = $reg['id'];
-                                $_SESSION[$nmgrr] = $reg['nomeguerra'];
-                                $_SESSION[$useridpg] = $regidpgrad;
-                                $_SESSION[$useridsu] = $reg['idsubunidade'];
-                                echo ("<td>" . $_SESSION[$userid] . "</td>");
-                                echo ("<td>" . $regpg . "</td>");
-                                echo ("<td>" . $_SESSION[$nmgrr] . "</td>");
+                                $reg = $qtdusers[$i]; ?>
+                                <tr>
+                                  <td><?=$reg['id']?></td>
+                                  <td><?=getPGrad($reg['idpgrad'])?></td>
+                                  <td><?=$reg['nomeguerra']?></td>
+                                <?php
                                 //Pesquisa situação de arranchamento
                                 $consultarancho = $pdo2->prepare("SELECT * FROM arranchado WHERE data = :datarancho AND iduser = :iduser");
                                 $consultarancho->bindParam(":datarancho", $datarancho, PDO::PARAM_STR);
@@ -127,12 +119,10 @@ if ($erro < 1) { ?>
                                     <td><input type="checkbox" name=<?= "ocafe" . $i . "" ?> value="SIM" <?= ($regrancho['cafe'] == "SIM") ? 'checked' : '' ?>></td>
                                     <td><input type="checkbox" name=<?= "oalmoco" . $i . "" ?> value="SIM" <?= ($regrancho['almoco'] == "SIM") ? 'checked' : '' ?>></td>
                                     <td><input type="checkbox" name=<?= "ojantar" . $i . "" ?> value="SIM" <?= ($regrancho['jantar'] == "SIM") ? 'checked' : '' ?>></td>
-                              <?php 
-                                  echo ("<td>" . $regrancho['quemgrava'] . "</td>");
-                                  echo ("<td>" . $regrancho['modo'] . "</td>");
-                                }
-                                echo "</tr>";
-                              } ?>
+                                  <td><?=$regrancho['quemgrava']?></td>
+                                  <td><?=$regrancho['modo']?></td>
+                                </tr>
+                              <?php } ?>
                             </tbody>
                           </table>
                           <hr>

@@ -2,6 +2,7 @@
 
 require "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
+print_r($_POST);
 $pdo_2 = conectar("arranchamento");
 $datarancho = filter_input(INPUT_GET, "datarancho");
 $qtduser = filter_input(INPUT_GET, "qtduser");
@@ -48,11 +49,13 @@ for ($i = 0; $i < $qtduser; $i++) {
                     . "VALUES (:data, :iduser, :idpgrad, :idsu, :nomeguerra, "
                     . ":cafe, :almoco, :jantar, "
                     . ":datagrava, :horagrava, :quemgrava, :modo)");
+            $a = -1;
+            $b = '-1';
             $stmtez->bindParam(":data", $datarancho, PDO::PARAM_STR);
             $stmtez->bindParam(":iduser", $m_userid, PDO::PARAM_INT);
-            $stmtez->bindParam(":idpgrad", $m_useridpg, PDO::PARAM_INT);
-            $stmtez->bindParam(":idsu", $m_useridusu, PDO::PARAM_INT);
-            $stmtez->bindParam(":nomeguerra", $m_nomeguerra, PDO::PARAM_STR);
+            $stmtez->bindParam(":idpgrad", $a, PDO::PARAM_INT);
+            $stmtez->bindParam(":idsu", $a, PDO::PARAM_INT);
+            $stmtez->bindParam(":nomeguerra", $b, PDO::PARAM_STR);
             $stmtez->bindParam(":cafe", $m_cafe, PDO::PARAM_STR);
             $stmtez->bindParam(":almoco", $m_almoco, PDO::PARAM_STR);
             $stmtez->bindParam(":jantar", $m_jantar, PDO::PARAM_STR);

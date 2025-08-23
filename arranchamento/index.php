@@ -222,7 +222,7 @@ for ($i = 0; $i < $maxdiasexibir; $i++) {
                           if (count($mcardapio) < 1) { ?>
                             <td><a> <i class="fa fa-close color-danger"></i></a></td>
                           <?php } else { ?>
-                            <td><a href="<?=('mostracard.php?out=' . $cardia) ?>" class='fa fa-eye color-success' data-toggle='modal' data-target='#lg-modal'></a></td>
+                            <td><a href="<?=('mostracard.php?out=' . $cardia) ?>" onclick="window.open('<?=('mostracard.php?out=' . $cardia) ?>', 'newwindow','width=300,height=250'); return false;" class='fa fa-eye color-success' data-toggle='modal' data-target='#lg-modal'></a></td>
                         <?php } } ?>
                         </tr>
                       </tbody>

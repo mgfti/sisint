@@ -8,7 +8,10 @@
 
 $isTest = true; // Essa variável deve ser usada APENAS em ambiente de desenvolvimento e testes 
 
-date_default_timezone_set("America/Cuiaba"); // Define o fuso horário do sistema
+date_default_timezone_set("America/Cuiaba"); // Define o fuso horário do sistema no fuso de AC, AM, MS, MT, RO e RR
+// date_default_timezone_set("America/Sao_Paulo"); // Define o fuso horário do sistema no horário de Brasília.
+
+$isOM_AAAe = true; // Se True, cria campos específicos para o registro e criação de relatórios de temperatura e umidade de UTir, Radar e Simulador
 
 /* Configurações do Banco de dados */
 define('DB_DRIVER', 'mysql');

@@ -97,11 +97,13 @@ foreach($evts as $evt) {
                                 $stmt->execute();
                                 $aniversarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 $su = listar_subunidades();
+                                //print_r($su);
                                 foreach($aniversarios as $aniv) { ?>
                                 <tr  class="font-weight-light small<?=substr($aniv['datanascimento'],0,2)==date('d') ? ' bg-success' : ''?>">
                                 <td><?=substr($aniv['datanascimento'], 0, 5)?></td>
                                 <td><?=getPGrad($aniv['idpgrad']).' '.$aniv['nomeguerra']?></td>
-                                <td><?=$su[($aniv['idsubunidade'] - 1)]['descricao']?></td>
+                                <td><?=get_subunidade_from_lista_e_id($su, $aniv['idsubunidade'])?></td>
+
                             </tr>
                             <?php } ?>
                         </table>

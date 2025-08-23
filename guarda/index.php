@@ -3,7 +3,7 @@ require "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
 
 if ($_SESSION['nivel_guarda'] == "Sem Acesso") {
-    $msgerro = base64_encode('Usuário não possui acesso! Somente usuário: Anotador Aloj!');
+    $msgerro = base64_encode('Usuário não possui acesso!');
     header('Location: ../sistemas/index.php?token=' . $msgerro);
     exit();
 }

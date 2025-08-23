@@ -18,4 +18,12 @@ function listar_subunidades($id = '') {
     return $consulta->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function get_subunidade_from_lista_e_id($lista, $id) {
+    foreach($lista as $su) {
+        if($su['id'] == $id) {
+            return $su['descricao'];
+        }
+    }
+    return '---';
+}
 ?>

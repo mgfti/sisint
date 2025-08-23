@@ -16,9 +16,7 @@ $dep_data = $dep_data->fetchAll(PDO::FETCH_ASSOC);
 <!doctype html>
 <html lang="pt-BR" class="fixed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -153,10 +151,6 @@ $dep_data = $dep_data->fetchAll(PDO::FETCH_ASSOC);
     </div>
   </div>
   <?php include '../recursos/views/footer.php'; ?>
-  <script src="../recursos/vendor/toastr/toastr.min.js"></script>
-  <script src="../recursos/vendor/chart-js/chart.min.js"></script>
-  <script src="../recursos/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-  <script src="../recursos/vendor/javascripts/examples/dashboard.js"></script>
 </body>
 
 </html>   

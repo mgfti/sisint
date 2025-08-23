@@ -97,23 +97,21 @@ if (count($users) < 1) { // se não encontrar usuarios, significa que falhou no 
     // alguns computadores devem ser configurados com ip fixo, assim permite acesso ao utilizador mesmo que ele não possua privilégios
     // para verificar quais IP são permitidos, consulte recursos/conexao.php
 
-
     if ($users[0]['acessoguarda'] == "S") {
-      if ($users[0]['contaguarda'] == "1" and ($ip == $ipGuarda /*or $ip == $ipNotebook*/)) { // IP da Gda e do Notebook da RP
-        $_SESSION['nivel_guarda'] = "Anotador Gda";
-      } else if (($users[0]['contaguarda'] == "1" or $users[0]['contaguarda'] == "2") and $ip == $ipTotem) { // IP do Totem
-        $_SESSION['nivel_guarda'] = "Anotador Aloj";
-      } else if ($users[0]['contaguarda'] == "2" and ($ip == $ipGuarda /*or $ip == $ipNotebook*/)) { // IP da Gda e do Notebook da RP
-        $_SESSION['nivel_guarda'] = "Cabo Gda";
-      } else  if ($users[0]['contaguarda'] == "3") {
-        $_SESSION['nivel_guarda'] = "Oficial e Sargento";
+      if ($users[0]['contaguarda'] == "5") {
+      $_SESSION['nivel_guarda'] = "Administrador";
       } else if ($users[0]['contaguarda'] == "4") {
-        $_SESSION['nivel_guarda'] = "Supervisor";
-      } else if ($users[0]['contaguarda'] == "5") {
-        $_SESSION['nivel_guarda'] = "Administrador";
+      $_SESSION['nivel_guarda'] = "Supervisor";
+      } else  if ($users[0]['contaguarda'] == "3") {
+      $_SESSION['nivel_guarda'] = "Oficial e Sargento";
+      } else if ($users[0]['contaguarda'] == "2" and ($ip == $ipGuarda /*or $ip == $ipNotebook*/)) { // IP da Gda e do Notebook da RP
+      $_SESSION['nivel_guarda'] = "Cabo Gda";
+      } else if ($users[0]['contaguarda'] == "1" and ($ip == $ipGuarda /*or $ip == $ipNotebook*/)) { // IP da Gda e do Notebook da RP
+      $_SESSION['nivel_guarda'] = "Anotador Gda";
+      } else if (($users[0]['contaguarda'] == "1" or $users[0]['contaguarda'] == "2") and $ip == $ipTotem) { // IP do Totem
+      $_SESSION['nivel_guarda'] = "Anotador Aloj";
       } else {
         $_SESSION['nivel_guarda'] = "Sem Acesso";
-
       }
     } else {
       $_SESSION['nivel_guarda'] = "Sem Acesso";
