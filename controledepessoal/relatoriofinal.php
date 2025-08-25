@@ -97,7 +97,7 @@ if ($subunidade > 0) { // FOI ESCOLHIDO UMA SUBUNIDADE
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Sistema CONTROLE DE PESSOAL 3ª Bia AAAe">
 
-  <title><?php echo $subtitulo ?></title>
+  <title><?= $subtitulo ?></title>
 
   <link rel="apple-touch-icon" sizes="120x120" href="../recursos/assets/favicon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../recursos/assets/favicon.png">
@@ -124,7 +124,6 @@ if ($subunidade > 0) { // FOI ESCOLHIDO UMA SUBUNIDADE
         <?php
         for ($i = 0; $i < $qtd_users; $i++) {
           $reg = $qtdusers[$i];
-          print_r($reg['idpgrad']);
           $su4 = listar_subunidades($reg['idsubunidade'])[0];
           $consultaSetor = $pdo->prepare("SELECT bairros.bairro, setores.setor FROM bairros LEFT JOIN setores ON (bairros.setor = setores.id) WHERE bairros.id = :idBairros");
           $consultaSetor->bindParam(":idBairros", $reg['bairro'], PDO::PARAM_STR);
