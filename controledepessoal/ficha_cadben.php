@@ -107,7 +107,7 @@ $dependentes = $dependentes->fetchAll(PDO::FETCH_ASSOC);
         </div>
                 
         
-        <?= DateTime('now', DateTimeZone('America/Cuiaba'))->format('j \d\e F \d\e Y') ?>
+        <?= DateTime('now', DateTimeZone($default_timezone))->format('j \d\e F \d\e Y') ?>
         <script>
             alert('Verifique se seus dados estão corretamente preenchidos. Caso não estejam, atualize seus dados');
         </script>

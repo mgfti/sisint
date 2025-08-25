@@ -8,8 +8,7 @@
 
 $isTest = true; // Essa variável deve ser usada APENAS em ambiente de desenvolvimento e testes 
 
-date_default_timezone_set("America/Cuiaba"); // Define o fuso horário do sistema no fuso de AC, AM, MS, MT, RO e RR
-// date_default_timezone_set("America/Sao_Paulo"); // Define o fuso horário do sistema no horário de Brasília.
+$default_timezone = "America/Sao_Paulo"; // "America/Cuiaba" ou "America/Sao_Paulo"
 
 $isOM_AAAe = true; // Se True, cria campos específicos para o registro e criação de relatórios de temperatura e umidade de UTir, Radar e Simulador
 
@@ -26,6 +25,7 @@ if($isTest) {
   define('DB_PWD', 'Mudar aqui');
 }
 
+date_default_timezone_set($default_timezone); // Define o fuso horário do sistema no fuso de AC, AM, MS, MT, RO e RR
 /* Configurações da organização militar que executa o sistema */
 define('SISBOL_URL', 'http://10.10.10.10/band/'); // colocar o endereço com o caminho para a pasta band
 define('NOME_OM', '3ª Bateria de Artilharia Antiaérea'); // colocar o nome por extenso somente com as iniciais em maiúsculo

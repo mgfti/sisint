@@ -2,7 +2,6 @@
 require "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
 setlocale(LC_TIME, 'portuguese'); 
-date_default_timezone_set('America/Sao_Paulo');
 
 
 if (!isset($_POST['action'])) {
