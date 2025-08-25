@@ -1,4 +1,7 @@
 <?php
+
+// Esse módulo ainda não está concluído
+
 require "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
 if($_SESSION['nivel_fatos_observados'] == 'Sem Acesso') { //TOOD: Verificar permissões
