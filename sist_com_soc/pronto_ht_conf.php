@@ -1,7 +1,7 @@
 <?php
 
-include "../recursos/models/conexao.php";
 require "../recursos/models/versession.php";
+include "../recursos/models/conexao.php";
 $pdo1 = conectar("membros");
 $pdo2 = conectar("guarda");
 $pdo3 = conectar("sistcomsoc");

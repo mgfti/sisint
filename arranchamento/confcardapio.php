@@ -2,13 +2,17 @@
 
 require "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
+
 $pdo2 = conectar("arranchamento");
+
 $cardcafe = filter_input(INPUT_POST, "cardcafe");
 $cardalmoco = filter_input(INPUT_POST, "cardalmoco");
 $cardjantar = filter_input(INPUT_POST, "cardjantar");
 $datacardapio = filter_input(INPUT_GET, "dtc");
+
 $hoje = date("d/m/Y");
 $agora = date("H:i:s");
+
 $quemgrava = getPGrad($_SESSION['auth_data']['idpgrad']) . " " . $_SESSION['auth_data']['nomeguerra'];
 $pesquisa = "SELECT * FROM cardapio WHERE data = :datacardapio";
 $stmt = $pdo2->prepare($pesquisa);

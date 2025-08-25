@@ -1,4 +1,5 @@
 <?php
+require "../recursos/models/versession.php";
 require "../recursos/models/conexao.php";
 $pdo1 = conectar("membros");
 $totalmembros = "SELECT * FROM usuarios";

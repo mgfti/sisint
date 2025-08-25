@@ -1,4 +1,5 @@
 <?php
+include "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
 
 echo "<table border=1 width=100% cellpadding=3 cellspacing=0>\n";

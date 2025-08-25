@@ -1,7 +1,7 @@
 <?php
 // importar arquivos necessários para executar o código
-include "../recursos/models/conexao.php";
 require "../recursos/models/versession.php";
+include "../recursos/models/conexao.php";
 if ($_SESSION['nivel_com_soc'] == "Sem Acesso") {
     $msgerro = base64_encode('Usuário não possui acesso!');
     header('Location: ../sistemas/index.php?token=' . $msgerro);

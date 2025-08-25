@@ -1,4 +1,5 @@
 <?php
+include "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
 $pdo = conectar("membros");
 if (!empty($_SERVER['HTTP_CLIENT_IP'])) {

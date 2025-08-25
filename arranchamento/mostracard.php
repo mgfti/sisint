@@ -1,4 +1,5 @@
 <?php
+include "../recursos/models/versession.php";
 include "../recursos/models/conexao.php";
 $cardia = filter_input(INPUT_GET, "out");
 $p2 = conectar("arranchamento");
