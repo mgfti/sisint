@@ -12,12 +12,6 @@ $nomecompleto = filter_input(INPUT_POST, "nomecompleto", FILTER_SANITIZE_STRING)
 $nomecompleto = mb_strtoupper($nomecompleto, 'UTF-8');
 $tipo = filter_input(INPUT_POST, "tipo", FILTER_SANITIZE_STRING);
 $pdo = conectar('guarda');
-// PARA DEPURAÇÃO, EXCLUIR
-// echo '<pre>';
-// print_r($_POST);
-// print_r($_GET);
-// echo '</pre>';
-// // die('');
 
 // 2. obtenho a url que originou o acesso à essa requisição
 $retorno = explode('?', $_SERVER['HTTP_REFERER'])[0] . '?id=' . $_GET['id'];

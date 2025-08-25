@@ -37,6 +37,9 @@
             <li><a href="../sis_cautela" data-toggle="tooltip" data-placement="right" title="Controle de cautelas e carga no depósito">
                 <i class="fa fa-box" aria-hidden="true"></i><span>Sis Cautela</span>
           </a></li>
+            <li><a href="https://github.com/dirfel/sisint" data-toggle="tooltip" data-placement="right" title="Projeto do SISINT no GitHub" target="_blank">
+                <i class="fab fa-github" aria-hidden="true"></i><span>Sobre</span>
+          </a></li>
         </ul>
     </nav>
   </div>

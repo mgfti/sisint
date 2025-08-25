@@ -42,7 +42,7 @@ function render_painel_usu($sistnome, $userlvl = '') { ?>
     <div class="header-section"><a href="../sistemas" data-toggle="tooltip" data-placement="left" title="Menu Inicial"><i class="fa fa-gear log-out rotate" aria-hidden="true"></i></a></div>
     <div class="header-separator"></div>
     <?php if ($_SESSION['nivel_helpdesk'] != "Sem Acesso") { ?>
-        <div class="header-section"><a href="../helpdesk/novo_cham.php" data-toggle="tooltip" data-placement="left" title="Relatar problema ou sugestão"><i class="fa fa-bug log-out" aria-hidden="true"></i></a></div>
+        <div class="header-section"><a href="https://github.com/dirfel/sisint/issues" target="_blank" data-toggle="tooltip" data-placement="left" title="Relatar problema ou sugestão"><i class="fa fa-bug log-out" aria-hidden="true"></i></a></div>
     <?php }  ?>
     </div>
     
