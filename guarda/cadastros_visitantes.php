@@ -26,9 +26,7 @@ $pdo1 = conectar("guarda");
     <?php render_painel_usu('GUARDA', $_SESSION['nivel_guarda']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Cadastros de Visitantes', 'fa fa-street-view'); ?>
         <div class="row animated fadeInUp">

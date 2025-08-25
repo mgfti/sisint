@@ -24,9 +24,7 @@ if ($_SESSION['auth_data']['contarancho'] == "4") {
 <!doctype html>
 <html lang="pt-BR" class="fixed left-sidebar-collapsed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">

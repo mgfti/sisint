@@ -37,9 +37,7 @@ $color = ($totalTotalChamadoAbertos > 0) ? "danger" : "success";
 <!doctype html>
 <html lang="pt-BR" class="fixed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -47,9 +45,7 @@ $color = ($totalTotalChamadoAbertos > 0) ? "danger" : "success";
     <?php render_painel_usu('HELPDESK', $_SESSION['nivel_helpdesk']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Desbloquear Livro de Partes do Oficial-de-Dia', 'fa fa-rank'); ?>
         <div class="row">

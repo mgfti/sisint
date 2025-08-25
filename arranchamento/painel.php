@@ -22,9 +22,7 @@ $idmembro = $_SESSION['auth_data']['id'];
 <!doctype html>
 <html lang="pt-BR" class="fixed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">

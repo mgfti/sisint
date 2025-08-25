@@ -17,9 +17,7 @@ $reg_usu = read_usuario_by_id($idusuario);
 <!doctype html>
 <html lang="pt-BR" class="fixed left-sidebar-collapsed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -27,9 +25,7 @@ $reg_usu = read_usuario_by_id($idusuario);
     <?php render_painel_usu('CONTROLE DE PESSOAL', $_SESSION['nivel_plano_chamada']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Atualizar Dados de Usuários', 'fa fa-pencil-alt'); ?>
         <div class="row animated fadeInUp">

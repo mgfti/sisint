@@ -16,9 +16,7 @@ include "indexInfo.php";
 <!doctype html>
 <html lang="pt-BR" class="fixed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -26,9 +24,7 @@ include "indexInfo.php";
     <?php render_painel_usu('GUARDA', $_SESSION['nivel_guarda']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Informações do Serviço', 'fa fa-home'); ?>
         <div class="row animated fadeInRightBig">

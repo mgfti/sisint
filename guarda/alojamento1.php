@@ -18,9 +18,7 @@ $hora = date("H:i");
 <!doctype html>
 <html lang="pt-BR" class="fixed left-sidebar-collapsed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -28,9 +26,7 @@ $hora = date("H:i");
     <?php render_painel_usu('GUARDA', $_SESSION['nivel_guarda']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Entrada e Saída no Alojamento de Cb/Sd', 'fa fa-door-open'); ?>
         <form id="validation" action="alojamento2.php" method="post">

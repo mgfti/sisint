@@ -11,9 +11,7 @@ if ($_SESSION['nivel_plano_chamada'] == "Sem Acesso") {
 <!doctype html>
 <html lang="pt-BR" class="fixed left-sidebar-collapsed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -21,9 +19,7 @@ if ($_SESSION['nivel_plano_chamada'] == "Sem Acesso") {
     <?php render_painel_usu('CONTROLE DE PESSOAL', $_SESSION['nivel_plano_chamada']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Setores', 'fa fa-road'); ?>
         <div class="row animated fadeInUp">

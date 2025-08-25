@@ -26,9 +26,7 @@ $data = date("d/m/Y");
 <!doctype html>
 <html lang="pt-BR" class="fixed left-sidebar-collapsed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -36,9 +34,7 @@ $data = date("d/m/Y");
       <?php include 'painel_usu.php'; ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Entrada e Saída de Militares Fora do Expediente', 'fa fa-umbrella-beach'); ?>
         <div class="row animated fadeInUp">

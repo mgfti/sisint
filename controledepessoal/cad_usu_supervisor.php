@@ -24,9 +24,7 @@ $pdo = conectar("membros");
     <?php render_painel_usu('CONTROLE DE PESSOAL', $_SESSION['nivel_plano_chamada']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Cadastrar Novo Usuário no Sistema', 'fa fa-user-plus'); ?>
         <div class="row animated fadeInUp">

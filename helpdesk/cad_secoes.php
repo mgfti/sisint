@@ -18,9 +18,7 @@ if ($_SESSION['nivel_helpdesk'] != "Administrador") {
   <div class="wrap">
     <div class="page-header"><?php render_painel_usu('HELPDESK', $_SESSION['nivel_helpdesk']); ?></div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Seções de Trabalho', 'fa fa-boxes'); ?>
         <div class="row animated fadeInUp">

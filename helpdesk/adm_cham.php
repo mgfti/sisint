@@ -26,9 +26,7 @@ $panel = ($totalTotalChamadoAbertos > 0) ? "panel-danger" : "panel-primary";
 <!doctype html>
 <html lang="pt-BR" class="fixed left-sidebar-collapsed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -36,9 +34,7 @@ $panel = ($totalTotalChamadoAbertos > 0) ? "panel-danger" : "panel-primary";
     <?php render_painel_usu('HELPDESK', $_SESSION['nivel_helpdesk']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Administrar Chamados, Totalizando: '. $totalTotalChamado, 'fa fa-toolbox'); ?>
         <div class="row animated fadeInUp">

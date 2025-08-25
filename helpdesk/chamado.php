@@ -57,9 +57,7 @@ if ($chamado['idetiqueta'] == '0') {
 <!doctype html>
 <html lang="pt-BR" class="fixed left-sidebar-collapsed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -67,9 +65,7 @@ if ($chamado['idetiqueta'] == '0') {
     <?php render_painel_usu('HELPDESK', $_SESSION['nivel_helpdesk']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Chamado: '.$numchamado.' - Solicitante: '. $pg_solicitante. ' '. $nome_solicitante. ' (ID: '.$chamado['idsolicitante'].')', 'fa fa-mail-reply-all'); ?>
         <div class="row animated fadeInUp">

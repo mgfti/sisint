@@ -87,9 +87,7 @@ for ($i = 0; $i < $maxdiasexibir; $i++) {
     <?php render_painel_usu('ARRANCHAMENTO', $_SESSION['nivel_arranchamento']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Arranchamento', 'fa fa-home'); ?>
         <div class="row">

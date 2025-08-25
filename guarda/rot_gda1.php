@@ -14,9 +14,7 @@ $pdo = conectar("membros");
 <!doctype html>
 <html lang="pt-BR" class="fixed left-sidebar-collapsed">
 
-<head>
-  <?php include '../recursos/views/cabecalho.php'; ?>
-</head>
+<head><?php include '../recursos/views/cabecalho.php'; ?></head>
 
 <body>
   <div class="wrap">
@@ -24,9 +22,7 @@ $pdo = conectar("membros");
     <?php render_painel_usu('GUARDA', $_SESSION['nivel_guarda']); ?>
     </div>
     <div class="page-body">
-      <div class="left-sidebar">
-        <?php include 'menu_opc.php'; ?>
-      </div>
+      <div class="left-sidebar"><?php include 'menu_opc.php'; ?></div>
       <div class="content">
       <?php render_content_header('Roteiro da Guarda e dos Postos', 'fa fa-list'); ?>
         <div class="row animated fadeInUp">
